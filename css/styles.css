@@ -6,18 +6,31 @@
 
 body {
     background-color: aqua;
+    height: 1000px;
+    display: flex;
+}
+
+header {
+    transition: 1s;
+    width: 100vw;
+    height: 0rem;
+    position: fixed;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: antiquewhite;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+    top: 20px;
+    right: 0px;
+    margin: 4% 0 0 86% ;
     cursor: pointer;
-    box-shadow: 0 0 0 0px antiquewhite,  0 0 0 0px antiquewhite;
+    box-shadow: 0 0 0 5px antiquewhite,  0 0 0 5px antiquewhite;
     transition: box-shadow 1.1s cubic-bezier(.19, 1, .22, 1);
 }
 
@@ -29,10 +42,10 @@ body {
     position: relative;
     display: block; /*enables add body*/
     background-color: #000;
-    width: 30px;
+    width: 25px;
     height: 2px;
-    top: 29px;
-    left: 15px;
+    top: 14px;
+    left: 2px;
     transition: .5s ease-in-out;
 }
 
@@ -64,10 +77,10 @@ input:checked ~ ul {
 }
 
 input:checked ~ label .menu {
-    box-shadow: 0 0 0 130vw antiquewhite,  0 0 0 130vh antiquewhite;
+    box-shadow: 0 0 0 5px antiquewhite,  0 0 0 5px antiquewhite;
 }
 
-input:checked ~ label .hamburger{
+input:checked ~ label .hamburger {
     transform: rotate(45deg);
 }
 
@@ -81,18 +94,22 @@ input:checked ~ label .hamburger::after {
     bottom: 0;
 }
 
-ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+header ul {
+    transform: translate(-200%, -200%);
+    width: 100%;
+    height: 50%;
     list-style: none;
-    opacity: 0;
+    opacity: 1;
     transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 0 0 0;
+    /* padding: 0 2rem 0 2rem; */
 }
 
-a {
-    color: #000;
-    font-size: 47px;
+header ul li a {
+    font-size: 20px;
     text-decoration: none;
+    color: #000;
 }
